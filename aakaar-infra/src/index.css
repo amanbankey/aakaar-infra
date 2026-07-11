@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+@theme {
+  --font-heading: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  --color-primary: #F5A623;
+  --color-background: #0F1115;
+  --color-secondary: #1A1A1A;
+  --color-card: #171B22;
+  --color-accent: #FFB000;
+  --color-text: #FFFFFF;
+  --color-text-muted: #B8C1CC;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 999px;
+}
+
+.text-gradient {
+  background: linear-gradient(120deg, var(--color-primary), var(--color-accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.grid-overlay {
+  background-image:
+    linear-gradient(rgba(245, 166, 35, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(245, 166, 35, 0.06) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.noise-overlay {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+  mix-blend-mode: overlay;
+}
+
+.blueprint-pattern {
+  background-image:
+    linear-gradient(rgba(245, 166, 35, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(245, 166, 35, 0.08) 1px, transparent 1px);
+  background-size: 100px 100px;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(245, 166, 35, 0.45); }
+  50% { box-shadow: 0 0 0 14px rgba(245, 166, 35, 0); }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2.4s ease-out infinite;
+}
+
+@keyframes floatY {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-16px); }
+}
+
+.animate-float {
+  animation: floatY 6s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradientShift 8s ease infinite;
+}

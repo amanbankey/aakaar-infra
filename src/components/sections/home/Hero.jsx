@@ -1,15 +1,24 @@
-import { useEffect, useRef } from 'react'
-import { motion } from 'framer-motion'
+import  React,  {useState, useEffect, useRef } from 'react'
+import { motion , AnimatePresence} from 'framer-motion'
 import gsap from 'gsap'
 import { ArrowRight, Star, ShieldCheck } from 'lucide-react'
 import Button from '../../ui/Button.jsx'
 import { business } from '../../../constants/business.js'
 import { fadeUp, fadeIn } from '../../../animations/variants.js'
 
+const heroImages = [
+  "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=1920",
+
+  "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1920",
+
+  "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1920",
+];
+
 export default function Hero() {
   const orbOneRef = useRef(null)
   const orbTwoRef = useRef(null)
-
+ 
+const [currentImage, setCurrentImage] = useState(0);
   useEffect(() => {
     const handleMouseMove = (e) => {
       const x = (e.clientX / window.innerWidth - 0.5) * 60
@@ -21,15 +30,41 @@ export default function Hero() {
     return () => window.removeEventListener('mousemove', handleMouseMove)
   }, [])
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % heroImages.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+  
+
   return (
     <section className="relative min-h-screen flex items-center pt-28 pb-20 overflow-hidden">
-      <div className="absolute inset-0 -z-20">
-        <img
-          src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=1920"
-          alt="Construction site at dusk"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/85 to-background" />
+          <div className="absolute inset-0 -z-20">
+
+        <AnimatePresence mode="wait">
+          <motion.img
+            key={currentImage}
+            src={heroImages[currentImage]}
+            alt="Construction site"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1 }}
+            className="absolute inset-0 w-full h-full object-cover object-[center_25%]"
+          />
+        </AnimatePresence>
+
+        {/* Overall dark overlay */}
+        <div className="absolute inset-0 bg-black/30" />
+
+        {/* Bottom dark gradient */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-background" />
+
+        {/* Extra darkness at bottom */}
+        <div className="absolute bottom-0 left-0 right-0 h-[50%] bg-gradient-to-t from-background via-background/40 to-transparent" />
+
       </div>
 
       <div className="absolute inset-0 -z-10 grid-overlay opacity-30" />

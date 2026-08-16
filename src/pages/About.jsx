@@ -7,7 +7,15 @@ import CoreValues from '../components/sections/about/CoreValues.jsx'
 import StatsSection from '../components/sections/home/StatsSection.jsx'
 import WhyChooseUs from '../components/sections/home/WhyChooseUs.jsx'
 
+    const aboutImages = [
+        "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1920",
+        "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1920",
+        "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=1920"
+    ] 
+
+
 export default function About() {
+  
   return (
     <>
       <SEO
@@ -18,7 +26,7 @@ export default function About() {
         eyebrow="About Aakaar Infra"
         title="Building With Purpose Since Day One"
         description="A decade of construction expertise rooted in Khandwa, Madhya Pradesh."
-        image="https://images.unsplash.com/photo-1541558869434-2840d308329a?q=80&w=1920"
+        images={aboutImages}
       />
       <CompanyStory />
       <MissionVision />

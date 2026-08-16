@@ -2,6 +2,12 @@ import SEO from '../components/SEO.jsx'
 import PageHero from '../components/ui/PageHero.jsx'
 import ProjectsGallery from '../components/sections/projects/ProjectsGallery.jsx'
 
+const projectImages = [
+  "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1920",
+  "https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=1920",
+  "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=1920",
+];
+
 export default function Projects() {
   return (
     <>
@@ -13,7 +19,7 @@ export default function Projects() {
         eyebrow="Our Portfolio"
         title="Projects Delivered With Precision"
         description="Explore our completed and ongoing residential, commercial, industrial and infrastructure work."
-        image="https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?q=80&w=1920"
+        images={projectImages}
       />
       <ProjectsGallery />
     </>

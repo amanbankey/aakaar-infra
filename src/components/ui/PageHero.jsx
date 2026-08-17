@@ -53,7 +53,7 @@ export default function PageHero({ eyebrow, title, description, image, images })
         >
           {eyebrow}
         </motion.span>
-        <motion.h1
+        {/* <motion.h1
           custom={0.1}
           variants={fadeUp}
           initial="hidden"
@@ -61,8 +61,8 @@ export default function PageHero({ eyebrow, title, description, image, images })
           className="mt-4 text-4xl sm:text-5xl md:text-6xl font-bold"
         >
           {title}
-        </motion.h1>
-        {description && (
+        </motion.h1> */}
+        {/* {description && (
           <motion.p
             custom={0.2}
             variants={fadeUp}
@@ -72,7 +72,7 @@ export default function PageHero({ eyebrow, title, description, image, images })
           >
             {description}
           </motion.p>
-        )}
+        )} */}
       </div>
     </section>
   )

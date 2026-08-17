@@ -1,3 +1,15 @@
+
+import img1 from "../assets/Images/webp/img1.webp"
+import img2 from "../assets/Images/webp/img2.webp"
+import img3 from "../assets/Images/webp/img3.webp"
+import img4 from "../assets/Images/webp/img4.webp"
+import img5 from "../assets/Images/webp/img5.webp"
+import img6 from "../assets/Images/webp/img6.webp"
+import img7 from "../assets/Images/webp/img7.webp"
+import img8 from "../assets/Images/webp/img8.webp"
+import img9 from "../assets/Images/webp/img9.webp"
+
+
 export const projectCategories = [
   'All',
   'Residential',
@@ -6,77 +18,70 @@ export const projectCategories = [
   'Infrastructure',
 ]
 
+
+
 export const projects = [
   {
     id: 1,
     title: 'Shivaji Residency',
     category: 'Residential',
     location: 'Khandwa, MP',
-    image:
-      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200',
+    image:  img1,
   },
   {
     id: 2,
     title: 'Vidhyuth Business Park',
     category: 'Commercial',
     location: 'Khandwa, MP',
-    image:
-      'https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200',
+    image: img2,
   },
   {
     id: 3,
     title: 'Narmada Industrial Estate',
     category: 'Industrial',
     location: 'Khandwa, MP',
-    image:
-      'https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=1200',
+    image:  img3,
   },
   {
     id: 4,
     title: 'Apsara Heights',
     category: 'Residential',
     location: 'Khandwa, MP',
-    image:
-      'https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1200',
+    image: img4,
   },
   {
     id: 5,
     title: 'City Link Road Project',
     category: 'Infrastructure',
     location: 'Khandwa, MP',
-    image:
-      'https://images.unsplash.com/photo-1621977718254-56d9d40e2b34?q=80&w=1200',
+    image:  img5,
   },
   {
     id: 6,
     title: 'Aakaar Corporate Tower',
     category: 'Commercial',
     location: 'Khandwa, MP',
-    image:
-      'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200',
+    image:   img6,
   },
   {
     id: 7,
     title: 'Khandwa Flyover Bridge',
     category: 'Infrastructure',
     location: 'Khandwa, MP',
-    image:
-      'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=1200',
+    image: img7,
   },
   {
     id: 8,
     title: 'Riverside Manufacturing Unit',
     category: 'Industrial',
     location: 'Khandwa, MP',
-    image:
-      'https://images.unsplash.com/photo-1565793298595-6a879b1d9492?q=80&w=1200',
+    image: img8,
   },
   {
     id: 9,
     title: 'Green Valley Villas',
     category: 'Residential',
     location: 'Khandwa, MP',
-    image:
-      'https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=1200',
+    image: img9,
   },
 ]

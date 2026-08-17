@@ -4,6 +4,8 @@ import ProjectCard from '../../ui/ProjectCard.jsx'
 import Button from '../../ui/Button.jsx'
 import { projects } from '../../../constants/projects.js'
 
+import { useState } from 'react'
+
 export default function ProjectsPreview() {
   const preview = projects.slice(0, 6)
 
@@ -28,6 +30,8 @@ export default function ProjectsPreview() {
           </Button>
         </div>
       </div>
+
+      
     </section>
   )
 }

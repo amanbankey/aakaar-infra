@@ -6,6 +6,7 @@ import useScrollPosition from '../../hooks/useScrollPosition.js'
 import { navLinks } from '../../constants/navLinks.js'
 import { business } from '../../constants/business.js'
 import Button from '../ui/Button.jsx'
+import logo from "../../assets/Images/aakar.png"
 
 export default function Header() {
   const scrolled = useScrollPosition(30)
@@ -21,8 +22,11 @@ export default function Header() {
     >
       <div className="max-w-7xl mx-auto px-5 md:px-8 flex items-center justify-between">
         <NavLink to="/" className="flex items-center gap-2">
+        <span>
+          <img src={logo} className='w-36 h-12' />
+        </span>
           <span className="text-xl md:text-2xl font-bold tracking-tight">
-            AAKAAR <span className="text-primary">INFRA</span>
+            {/* AAKAAR <span className="text-primary">INFRA</span> */}
           </span>
         </NavLink>
 

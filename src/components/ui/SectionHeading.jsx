@@ -1,10 +1,12 @@
 import { motion } from 'framer-motion'
 import { fadeUp } from '../../animations/variants.js'
 
+
 export default function SectionHeading({ eyebrow, title, description, align = 'center' }) {
   const alignment = align === 'center' ? 'items-center text-center mx-auto' : 'items-start text-left'
 
   return (
+    <div> 
     <motion.div
       className={`flex flex-col ${alignment} max-w-2xl mb-12 md:mb-16`}
       variants={fadeUp}
@@ -26,5 +28,7 @@ export default function SectionHeading({ eyebrow, title, description, align = 'c
         </p>
       )}
     </motion.div>
+     
+    </div>
   )
 }

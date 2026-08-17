@@ -2,6 +2,7 @@ import { NavLink } from 'react-router-dom'
 import { MapPin, Phone, Star, MessagesSquare, Camera, Briefcase, PlayCircle } from 'lucide-react'
 import { navLinks } from '../../constants/navLinks.js'
 import { business } from '../../constants/business.js'
+import logo from "../../assets/Images/aakar.png"
 
 const socialIcons = {
   Facebook: MessagesSquare,
@@ -17,9 +18,9 @@ export default function Footer() {
 
       <div className="relative max-w-7xl mx-auto px-5 md:px-8 grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-8">
         <div>
-          <span className="text-2xl font-bold">
-            AAKAAR <span className="text-primary">INFRA</span>
-          </span>
+              <span className="text-2xl font-bold">        
+                      <img src={logo} className='w-36 h-12' />
+              </span>
           <p className="text-[#B8C1CC] text-sm mt-4 leading-relaxed">
             Real estate builder and construction company delivering premium residential,
             commercial and infrastructure projects across Khandwa, Madhya Pradesh.
